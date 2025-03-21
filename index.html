@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Splitter - Tip Calculator</title>
 </head>
 <body>
@@ -18,13 +22,14 @@
                 <strong>Bill</strong>
 
                 <div class="input-box">
+                    <img src="./images/icon-dollar.svg" alt="icon dollar">
                     <input type="number" id="bill" placeholder="0">
                 </div>
             </div>
 
             <div class="tip">
                 <strong>Select Tip %</strong>
-                <div>
+                <div class="buttons">
                     <button>5%</button>
                     <button>10%</button>
                     <button>15%</button>
@@ -36,6 +41,7 @@
             <div class="number-of-people">
                 <strong>Number of People</strong>
                 <div>
+                    <img src="./images/icon-person.svg" alt="icon person">
                     <input type="number" id="people" placeholder="0">
                 </div>
             </div>

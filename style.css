@@ -1,21 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Space Mono", monospace;
+    font-family: 'Space Mono', sans-serif;
 }
 
-:root {
-    --bg-body: #C5E4E7;
-    --bg-main: #FFF;
+:root{
+    font-size: 62.5%;
+    --white: #fff;
+    --keppel: #26C2AE;
+    --antiflash-white: #F3F9FA;
+    --midnight-green: #00474B;
+    --body-background: #C5E4E7;
+    --hookers-green: #547878;
+    --greyish-turquoise: #5E7A7D;
 }
 
-body {
-    background: var(--bg-body);
+body{
+    background-color: var(--body-background);
+    font-size: 1.6rem;
 }
 
-main {
-    background: var(--bg-main);
+header{
+    height: 144px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    background-color: var(--white);
+    padding: 3.2rem 2.4rem;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.info{
+    padding-inline: .8rem;
+    div{
+        margin-bottom: 3.2rem;
+    }
+    strong {
+        color: var(--greyish-turquoise);
+    }
+    .input-box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--antiflash-white);
+        padding: 0.6rem 1.8rem;
+        height: 4.8rem;
+        width: 31.1rem;
+        border-radius: 5px;
+
+        input{
+            background-color: transparent;
+            border: none;
+            outline: none;
+            text-align: right;
+            width: 100%;
+            font-weight: 700;
+            font-size: 2.4rem;
+            color: var(--midnight-green);
+        }
+        input::placeholder{
+            color: var(--midnight-green);
+        }
+        &:has(input:focus){
+            outline: 2px solid var(--keppel);
+        }
+    }
+    .tip{
+        .buttons{
+            margin-top: 1.6rem;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 1.6rem;
+        }
+        button{
+            border: none;
+            padding: 1rem;
+        }
+    }
 }
