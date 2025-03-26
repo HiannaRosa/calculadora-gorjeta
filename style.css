@@ -13,7 +13,7 @@
     --midnight-green: #00474B;
     --body-background: #C5E4E7;
     --hookers-green: #547878;
-    --greyish-turquoise: #5E7A7D;
+    --greyish-turquoise: #7F9D9F;
 }
 
 body{
@@ -22,9 +22,9 @@ body{
 }
 
 header{
-    height: 144px;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -75,10 +75,73 @@ main{
             display: grid;
             grid-template-columns: repeat(2,1fr);
             gap: 1.6rem;
+
+            input{
+                color: var(--hookers-green);
+                background-color: var(--antiflash-white);
+                border: none;
+                border-radius: .5rem;
+                font-weight: 700;
+                text-align: right;
+                font-size: 2.4rem;
+                width: 100%;
+                text-align: right;
+                padding-right: .75rem;
+            }
+            input::placeholder{
+                color: var(--hookers-green);
+            }
+            input::focus{
+                outline: 2px solid var(--keppel);
+            }
         }
         button{
             border: none;
-            padding: 1rem;
+            padding: .6rem;
+            border-radius: .5rem;
+            background-color: var(--midnight-green);
+            color: var(--white);
+            font-size: 2.4rem;
+            font-weight: 700;
         }
+    }
+}
+
+.results{
+    background-color: var(--midnight-green);
+    padding: 2.4rem;
+    border-radius: 1.5rem;
+
+    .amount, .total{
+        color: var(--white);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2.5rem;
+
+        p{
+            font-weight: 700;
+            font-size: 1.6rem;
+        }
+
+        strong{
+            color: var(--keppel);
+            font-size: 3.2rem;
+        }
+        span{
+            color: var(--greyish-turquoise);
+            font-weight: 700;
+        }
+    }
+    button{
+        border: none;
+        background-color: var(--keppel);
+        padding-block: .9rem;
+        width: 100%;
+        border-radius: .5rem;
+        text-transform: uppercase;
+        font-size: 2.0rem;
+        color: var(--midnight-green);
+        font-weight: 700;
     }
 }
