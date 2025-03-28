@@ -32,6 +32,7 @@ main{
     background-color: var(--white);
     padding: 3.2rem 2.4rem;
     border-radius: 25px 25px 0px 0px;
+    box-shadow: 0 32px 43px 0 #4FA6AF33;
 }
 
 .info{
@@ -41,6 +42,8 @@ main{
     }
     strong {
         color: var(--greyish-turquoise);
+        display: block;
+        margin-bottom: .6rem;
     }
     .input-box{
         display: flex;
@@ -48,8 +51,6 @@ main{
         justify-content: space-between;
         background-color: var(--antiflash-white);
         padding: 0.6rem 1.8rem;
-        height: 4.8rem;
-        width: 31.1rem;
         border-radius: 5px;
 
         input{
@@ -82,10 +83,9 @@ main{
                 border: none;
                 border-radius: .5rem;
                 font-weight: 700;
-                text-align: right;
+                text-align: center;
                 font-size: 2.4rem;
                 width: 100%;
-                text-align: right;
                 padding-right: .75rem;
             }
             input::placeholder{
@@ -103,6 +103,9 @@ main{
             color: var(--white);
             font-size: 2.4rem;
             font-weight: 700;
+        }
+        .button-selected{
+            background-color: var(--keppel);
         }
     }
 }
@@ -143,5 +146,61 @@ main{
         font-size: 2.0rem;
         color: var(--midnight-green);
         font-weight: 700;
+    }
+}
+
+@media(min-width: 920px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    header {
+        margin: 6rem;
+    }
+    main{
+        width: 92rem;
+        display: flex;
+        gap: 4.8rem;
+        padding: 4.8rem;
+        margin-inline: auto;
+        border-radius: 2.5rem;
+
+        section{
+            width: 100%;
+        }
+
+        input::-webkit-inner-spin-button, input::-webkit-outer-spin-button{
+            display: none;
+        }
+
+        .info .tip .buttons{
+            grid-template-columns: repeat(3,1fr);
+
+            button{
+                transition: .5s;
+                margin-top: auto;
+            }
+
+            button:hover{
+                background-color: var(--keppel);
+                cursor: pointer;
+                transition: .5s;
+            }
+        }
+        .results{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .amount strong, .total strong{
+                font-size: 4.8rem;
+            }
+            .total span, .amount span{
+                font-size: 1.3rem;
+            }
+            button{
+                margin-top: auto;
+            }
+        }
     }
 }
