@@ -65,6 +65,7 @@ main{
         }
         input::placeholder{
             color: var(--midnight-green);
+            opacity: 0.35;
         }
         &:has(input:focus){
             outline: 2px solid var(--keppel);
@@ -88,7 +89,7 @@ main{
                 padding-right: .75rem;
             }
             input::placeholder{
-                color: var(--hookers-green);
+                color: var(--midnight-green);
                 text-align: center;
             }
             input::focus{
